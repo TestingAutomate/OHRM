@@ -1,0 +1,57 @@
+package com.StepDefinition;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class OrangeHRMApplicationMethods {
+	WebDriver driver;
+	String Application_Url="http://127.0.0.1/orangehrm-4.2.0.1/";
+	@Given("^User should open the ChromeBrowser$")
+	public void user_should_open_the_ChromeBrowser()  {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\eclipse-workspace\\OrangeHRMApplication_DDT\\BrowsersDriver\\chromedriver.exe");
+	    
+	}
+
+	@When("^User should Navigate to  OHRM Url Address$")
+	public void user_should_Navigate_to_OHRM_Url_Address()  {
+		driver.get(Application_Url);
+	    driver.manage().window().maximize();
+	    driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+	    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	   
+	}
+
+	@Then("^User should validate the Login Page Text$")
+	public void user_should_validate_the_Login_Page_Text()  {
+		String Expected="LOGIN Panel";
+		
+		By loginTextProperty=By.id("logInPanelHeading");
+		WebElement logintext	=driver.findElement(loginTextProperty);
+		
+		String actual_Text=logintext.getText();
+		if(actual_Text.equals(Expected)) {
+			System.out.println("Pass");
+			
+		}else {
+			System.out.println("Fail");
+		}
+	   
+	}
+
+	@Then("^User should close the Browser$")
+	public void user_should_close_the_Browser() {
+	   driver.close();
+	   System.out.println("closed");
+	}
+
+
+	
+
+}

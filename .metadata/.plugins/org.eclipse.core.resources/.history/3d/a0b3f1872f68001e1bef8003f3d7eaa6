@@ -1,0 +1,35 @@
+package com.POMExamples;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Login  {
+	public WebDriver driver;
+		@FindBy(id="txtUsername")
+		WebElement userName;
+		//<input name="" id="txtUsername" type="text">
+		@FindBy(id="txtPassword")
+		WebElement passWord;
+		@FindBy(id="btnLogin")
+		WebElement loginButton;	
+
+		public Login( WebDriver driver ){
+	//this.driver=driver;
+			PageFactory.initElements(driver, this);
+		}
+		public void userName(String uname) {
+		userName.sendKeys(uname);
+		}
+		
+		public void passWord(String pwd) {
+			userName.sendKeys(pwd);
+		}
+		public void login() {
+			loginButton.click();	
+		}
+	}
+
+

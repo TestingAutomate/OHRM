@@ -1,0 +1,14 @@
+package com.POMExamples;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+public class LoginTest extends BaseTest {
+	@Test
+	WebDriver driver;
+	Login obj;
+public void Set() {
+	 obj=new Login(driver);
+obj.loginpage();	
+}
+}

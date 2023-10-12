@@ -1,0 +1,9 @@
+Feature: OHRM Application  Functionality Testing
+
+Background:
+Given User should open the ChromeBrowser
+
+Scenario: Validating OHRM Application Login Webpage Testing
+When User should Navigate to  OHRM Url Address
+Then User should validate the Login Page Text
+Then User should close the Browser

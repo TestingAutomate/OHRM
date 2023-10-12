@@ -1,0 +1,12 @@
+package com.POMExamples;
+
+import org.openqa.selenium.WebDriver;
+
+public class LoginTest extends BaseTest {
+	WebDriver driver;
+	Login obj;
+public void Set() {
+	 obj=new Login(driver);
+obj.loginpage();	
+}
+}

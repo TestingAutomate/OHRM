@@ -1,0 +1,32 @@
+package com.Cucumber;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class CucumberExample {
+	@Given("^User should open the ChromeBrowser$")
+	public void user_should_open_the_ChromeBrowser()  {
+		System.setProperty("webdriver.chrome.driver", "")
+	    
+	}
+
+	@When("^User should Navigate to  OHRM Url Address$")
+	public void user_should_Navigate_to_OHRM_Url_Address()  {
+	   
+	}
+
+	@Then("^User should validate the Login Page Text$")
+	public void user_should_validate_the_Login_Page_Text()  {
+	   
+	}
+
+	@Then("^User should close the Browser$")
+	public void user_should_close_the_Browser() {
+	   
+	}
+
+
+	
+
+}

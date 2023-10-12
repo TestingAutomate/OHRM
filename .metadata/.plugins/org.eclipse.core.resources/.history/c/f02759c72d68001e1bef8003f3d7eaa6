@@ -1,0 +1,11 @@
+package com.StepDefinition;
+
+import com.POMExamples.BaseTest;
+import com.POMExamples.Login;
+
+public class POMEg  extends BaseTest{
+	Login log=new Login(driver);
+	
+	
+
+}

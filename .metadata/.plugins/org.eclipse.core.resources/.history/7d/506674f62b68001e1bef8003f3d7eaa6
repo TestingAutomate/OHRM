@@ -1,0 +1,14 @@
+package com.POMExamples;
+
+import org.testng.annotations.Test;
+
+public class LoginTest extends BaseTest {
+@Test
+public void Set() {
+	Login login=new Login(driver);
+	login.userName("Admin");
+	login.passWord("Livetech@123");
+	login.login();
+	
+}
+}

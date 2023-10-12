@@ -1,0 +1,11 @@
+package com.Utility;
+
+import org.apache.log4j.Logger;
+
+public class Log {
+	public static Logger log=Logger.getLogger("Log");
+	public  static void info(String message) {
+		
+	}
+
+}

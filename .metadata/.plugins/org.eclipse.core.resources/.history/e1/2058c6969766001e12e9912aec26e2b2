@@ -1,0 +1,14 @@
+package com.Utility;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+public class ExLog {
+	public static Logger log=Logger.getLogger("ExLog");
+	public  static void info(String message) {
+		
+		PropertyConfigurator.configure("C:\\Users\\user\\eclipse-workspace\\OrangeHRMApplication_DDT\\Log4j.properties");
+		ExLog.info(message);
+	}
+
+}

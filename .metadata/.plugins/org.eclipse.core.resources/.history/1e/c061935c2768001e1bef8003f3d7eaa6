@@ -1,0 +1,9 @@
+package com.POMExamples;
+
+public class LoginTest extends BaseTest {
+public void Set() {
+	Login obj=new Login(driver);
+	obj.login();
+	
+}
+}

@@ -1,0 +1,15 @@
+package com.POMExamples;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+public class LoginTest extends BaseTest {
+	
+	//WebDriver driver;
+	Login obj;
+	@Test
+public void Set() {
+	 obj=new Login(driver);
+obj.loginpage("Admin", "Livetech@123");	
+}
+}
